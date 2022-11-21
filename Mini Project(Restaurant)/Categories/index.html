@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        .container{
+            display: flex;
+            align-content: center;
+
+        }
+        .container div{
+            align-items: center;
+            margin: 20px;
+            width:100%
+        }
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+input{
+    width:75%;
+    font-size: 16px;
+}
+.addBtn:hover{
+    background-color: grey;
+}
+.header{
+    background-color: grey;
+    text-align: center;
+}
+ul li{
+    cursor: pointer;
+    padding: 12px 8px 12px 40px;
+    position: relative;
+    background: grey;
+    font-size: 18px;
+}
+.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <table>
+                <thead><h1 style="text-align: center;">Veg</h1></thead>
+                <tbody>
+                    <tr>
+                        <td>Paneer Tikka Masala</td>
+                        <td>160/-</td>
+                    </tr>
+                    <tr>
+                        <td>Shahi Paneer</td>
+                        <td>90/-</td>
+                    </tr>
+                    <tr>
+                        <td>Dal Fry</td>
+                        <td>60/-</td>
+                    </tr>
+                    <tr>
+                        <td>Duka Aloo</td>
+                        <td>80/-</td>
+                    </tr>
+                    <tr>
+                        <td>Gobi 65</td>
+                        <td>80/-</td>
+                    </tr>
+                    <tr>
+                        <td>Gobi Manchuriya</td>
+                        <td>70/-</td>
+                    </tr>
+                    <tr>
+                        <td>Jeera Rice</td>
+                        <td>60/-</td>
+                    </tr>
+                    <tr>
+                        <td>Veg. Pulao</td>
+                        <td>70/-</td>
+                    </tr>
+                    <tr>
+                        <td>Meals-Plate</td>
+                        <td>50/-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table>
+                <thead><h1 style="text-align: center;">Non-Veg</h1></thead>
+                <tbody>
+                    <tr>
+                        <td>Chicken Biryani</td>
+                        <td>160/-</td>
+                    </tr>
+                    <tr>
+                        <td>Mutton Kurma</td>
+                        <td>90/-</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Fry</td>
+                        <td>60/-</td>
+                    </tr>
+                    <tr>
+                        <td>Moru Curry</td>
+                        <td>80/-</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Roll</td>
+                        <td>80/-</td>
+                    </tr>
+                    <tr>
+                        <td>Chilli Mutton Dry Fry</td>
+                        <td>70/-</td>
+                    </tr>
+                    <tr>
+                        <td>Veppilakatti</td>
+                        <td>60/-</td>
+                    </tr>
+                    <tr>
+                        <td>Chicken Roast</td>
+                        <td>70/-</td>
+                    </tr>
+                    <tr>
+                        <td>Mutton Curry</td>
+                        <td>50/-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <table>
+                <thead><h1 style="text-align: center;">Drinks</h1></thead>
+                <tbody>
+                    <tr>
+                        <td>Badam Milk</td>
+                        <td>60/-</td>
+                    </tr>
+                    <tr>
+                        <td>Grape Juice</td>
+                        <td>50/-</td>
+                    </tr>
+                    <tr>
+                        <td>Banana Juice</td>
+                        <td>40/-</td>
+                    </tr>
+                    <tr>
+                        <td>Supporta Juice</td>
+                        <td>50/-</td>
+                    </tr>
+                    <tr>
+                        <td>Promogranite Juice</td>
+                        <td>40/-</td>
+                    </tr>
+                    <tr>
+                        <td>Fruit mix</td>
+                        <td>40/-</td>
+                    </tr>
+                    <tr>
+                        <td>Buttermilk</td>
+                        <td>30/-</td>
+                    </tr>
+                    <tr>
+                        <td>Apple juice</td>
+                        <td>20/-</td>
+                    </tr>
+                    <tr>
+                        <td>Mango Juice</td>
+                        <td>20/-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+
+    </div>  
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      <div>
+        <form action="Payment/index.html">
+            <button type="submit" style="text-align:center;">Pay Now</button>
+        </form>
+      </div>
+      <ul id="myUL">
+       </ul>
+      
+      <script>
+      function newElement() {
+        var el = document.createElement("li");
+      
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue);
+        el.appendChild(t);
+        if (inputValue === '') {
+          alert("You must write something!");
+        } else {
+          document.getElementById("myUL").appendChild(el);
+        }
+        document.getElementById("myInput").value = "";
+      
+        var sp = document.createElement("span");
+        var txt = document.createTextNode("X");
+        sp.className = "close";
+        sp.appendChild(txt);
+        el.appendChild(sp);
+      var close = document.getElementsByClassName("close");
+      var i;
+      
+        for (i = 0; i<close.length; i++) 
+      
+      {
+          close[i].onclick = function() {
+            this.parentElement.style.display = "none";
+            
+          }
+      }
+        }
+      
+    </script>
+</body>
+</html>
